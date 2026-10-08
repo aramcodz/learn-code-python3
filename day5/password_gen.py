@@ -9,15 +9,16 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-# Simple Version
+# Easy/ Simple Version
 letters = random.sample(letters, nr_letters - nr_numbers - nr_symbols)
 symbols = random.sample(symbols, nr_symbols)
-symbols = random.sample(symbols, nr_symbols)
 numbers = random.sample(numbers, nr_numbers)
-
-
 new_pw_lst = letters + symbols + numbers
+simple_password = "".join(new_pw_lst)
+print("Your simple/ordered password is: " + simple_password)
+
+# Add more randomness (char order) to password
 random.shuffle(new_pw_lst)
 new_password = "".join(new_pw_lst)
 
-print("Your password is: " + new_password)
+print("Your random ordered password is: " + new_password)
