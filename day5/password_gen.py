@@ -29,5 +29,4 @@ new_pw_lst = list(new_password)
 random.shuffle(new_pw_lst)
 new_password = "".join(new_pw_lst)
 
-
 print("Your random ordered password is: " + new_password)
